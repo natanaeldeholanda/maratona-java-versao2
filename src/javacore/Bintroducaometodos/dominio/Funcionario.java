@@ -11,9 +11,10 @@ Crie dois metodos:
 2. Para mostrar a média dos salarios e imprimir na tela
  */
 public class Funcionario {
-    public String nome;
-    public int idade;
-    public double[] salarios;
+    private String nome;
+    private int idade;
+    private double[] salarios;
+    private double media;
 
     public void imprimeDados(Funcionario funcionario) {
         System.out.println("Nome: " + this.nome);
@@ -41,5 +42,33 @@ public class Funcionario {
             media /= this.salarios.length; // -> Média recebe o valor da soma, e divide pela quantidade de salários;
         }
         System.out.printf("Media salarial: R$%.2f", media);
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+
+    public double[] getSalarios() {
+        return salarios;
+    }
+
+    public void setSalarios(double[] salarios) {
+        this.salarios = salarios;
+    }
+
+    public double getMedia() {
+        return media;
     }
 }
