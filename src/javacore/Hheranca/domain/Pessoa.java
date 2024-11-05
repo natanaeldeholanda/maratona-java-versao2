@@ -1,9 +1,17 @@
 package javacore.Hheranca.domain;
 
 public class Pessoa {
-    private String nome;
-    private String cpf;
-    private Endereco endereco;
+    protected String nome;
+    protected String cpf;
+    protected Endereco endereco;
+    public Pessoa(String nome){
+        this.nome = nome;
+    }
+
+    public Pessoa(String nome, String cpf){
+        this(nome); //chamando o construtor da classe Pessoa
+        this.cpf = cpf;
+    }
 
     public String getNome() {
         return nome;
