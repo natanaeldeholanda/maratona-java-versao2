@@ -1,10 +1,7 @@
 package javacore.Kenum.domain;
 
 public class Cliente {
-    public enum TipoPagamento{
-        CARTAO_CREDITO,
-        CARTAO_DEBITO
-    }
+
     private String nome;
     private TipoCliente tipoCliente;
     private TipoPagamento tipoPagamento;
@@ -20,7 +17,7 @@ public class Cliente {
         return "Cliente{" +
                 "nome='" + nome + '\'' +
                 ", tipoCliente=" + tipoCliente.getNomeRelatorio() +
-                ", tipoClienteInt=" + tipoCliente.VALOR +
+                ", tipoClienteInt=" + tipoCliente.valor +
                 ", tipoPagamento=" + tipoPagamento +
                 '}';
     }
