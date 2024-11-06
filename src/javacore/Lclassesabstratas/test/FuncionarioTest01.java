@@ -1,6 +1,7 @@
 package javacore.Lclassesabstratas.test;
 
 import javacore.Lclassesabstratas.domain.Desenvolvedor;
+import javacore.Lclassesabstratas.domain.Funcionario;
 import javacore.Lclassesabstratas.domain.Gerente;
 
 public class FuncionarioTest01 {
@@ -9,5 +10,8 @@ public class FuncionarioTest01 {
         System.out.println(gerente);
         Desenvolvedor desenvolvedorJavaJunior = new Desenvolvedor("Natanael", 7500);
         System.out.println(desenvolvedorJavaJunior);
+
+        gerente.imprime();
+        desenvolvedorJavaJunior.imprime();
     }
 }
