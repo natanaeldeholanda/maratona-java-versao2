@@ -1,22 +1,28 @@
 package javacore.Npolimorfismo.service;
 
 import javacore.Npolimorfismo.domain.Computador;
+import javacore.Npolimorfismo.domain.Produto;
+import javacore.Npolimorfismo.domain.Taxavel;
 import javacore.Npolimorfismo.domain.Tomate;
 
-public class CalculadoraImposto {
-    public static void calcularImpostoComoutador(Computador computador) {
-        System.out.println("Relatório de Imposto do Computador");
-        double imposto = computador.calcularImposto();
-        System.out.println("Imposto do Computador: " + computador.getNome());
-        System.out.println("Valor do Computador: " + computador.getValor());
+public class CalculadoraImposto implements Taxavel {
+    public static void calcularImposto(Produto produto) {
+        System.out.println("---***---");
+        System.out.println("Relatório de Imposto");
+        double imposto = produto.calcularImposto();
+        System.out.println("Produto: " + produto.getNome());
+        System.out.println("Valor: " + produto.getValor());
         System.out.println("Imposto a ser pago: " + imposto);
+        // foi feito o if para verificar se o produto é um tomate, se for, imprime a data de validade
+        // se não, imprime o produto normalmente;
+        if (produto instanceof Tomate) {
+            String dataValidade = ((Tomate) produto).getDataValidade();
+            System.out.println("Data Validade: " + dataValidade);
+        }
     }
 
-    public static void calcularImpostoTomate(Tomate tomate) {
-        System.out.println("Relatório de Imposto do Tomate");
-        double imposto = tomate.calcularImposto();
-        System.out.println("Imposto do Tomate: " + tomate.getNome());
-        System.out.println("Valor do Tomate: " + tomate.getValor());
-        System.out.println("Imposto a ser pago: " + imposto);
+    @Override
+    public double calcularImposto() {
+        return 0;
     }
 }

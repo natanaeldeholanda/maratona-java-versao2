@@ -7,7 +7,6 @@ public class AnimeTest01 {
     public static void main(String[] args) {
         Anime anime = new Anime("Haikyuu", "Anime", 10, "Seinen");
         Anime anime2 = new Anime(); // Criando através do contrutor que o java cria automaticamente;
-        Anime anime3 = new Anime("YouYou Hakusho", "Ação", 45, "Fantasia", "Álamo");
-        anime3.imprime();
+        anime.imprime();
     }
 }
