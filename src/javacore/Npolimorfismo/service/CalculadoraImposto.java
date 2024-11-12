@@ -13,11 +13,18 @@ public class CalculadoraImposto implements Taxavel {
         System.out.println("Produto: " + produto.getNome());
         System.out.println("Valor: " + produto.getValor());
         System.out.println("Imposto a ser pago: " + imposto);
-        // foi feito o if para verificar se o produto é um tomate, se for, imprime a data de validade
-        // se não, imprime o produto normalmente;
+        // foi feito o if para verificar se o produto é um tomate ou computador.
+        // Se for, imprime a data de validade
+        // Se não, não imprime;
         if (produto instanceof Tomate) {
             String dataValidade = ((Tomate) produto).getDataValidade();
             System.out.println("Data Validade: " + dataValidade);
+        }
+        else if (produto instanceof Computador) {
+            String dataCompra = ((Computador) produto).getDataCompra();
+            System.out.println("Data da Compra: " + dataCompra);
+        } else {
+            System.out.println("Produto não é taxável");
         }
     }
 
