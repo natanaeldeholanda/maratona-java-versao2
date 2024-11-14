@@ -19,8 +19,8 @@ public class RepositorioTest01 {
         repositorioMemoria.salvar();
         System.out.println("---***---");
         List<String> lista = new LinkedList<>();
-        lista.add("Natanael");
         lista.add("Rei do Java");
+        lista.add("Natanael");
         lista.add("Holanda");
         System.out.println(lista);
     }
