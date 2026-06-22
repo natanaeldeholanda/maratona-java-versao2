@@ -2,9 +2,15 @@ package estruturascondicionais;
 
 public class EstruturaIf {
     public static void main(String[] args) {
-        if (false){
-            System.out.println("Dentro do IF!");
+        int idade = 10;
+        boolean isAutorizadoComprarBebida = idade >= 18;
+
+        if (idade >= 18) {
+            System.out.println("Aurotizado a comprar bebida alcoólica!");
         }
-        System.out.println("Fora do IF!!");
+        //!, pode ser usado com == (comparação)
+        if (!isAutorizadoComprarBebida) {
+            System.out.println("Não Aurotizado a comprar bebida alcoólica!");
+        }
     }
 }
